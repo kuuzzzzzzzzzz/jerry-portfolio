@@ -47,7 +47,8 @@ export default function Contact() {
           </a>
           <a
             className="flex items-center justify-between rounded-lg bg-white/8 px-5 py-4 text-sm font-medium text-white ring-1 ring-white/10 transition-colors hover:bg-white/12"
-            href="#"
+            href="/resume.pdf"
+            target="_blank"
           >
             <span className="flex items-center gap-3">
               <Download className="h-4 w-4" />

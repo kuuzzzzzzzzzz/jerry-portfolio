@@ -41,19 +41,19 @@ const projects = [
   },
   {
     icon: Bot,
-    title: 'Naive RAG API 文档问答系统',
-    role: 'RAG API 开发者',
-    tag: 'FastAPI / FAISS / LlamaIndex / DeepSeek',
+    title: '企智问档 RAG + Agent 智能文档问答系统',
+    role: '项目组长 / RAG 与 Agent 核心开发',
+    tag: 'LangGraph / LangChain / FastAPI / ChromaDB',
     link: '#',
     description:
-      '基于本地学习笔记构建的 RAG 文档问答 API，支持文档加载、文本切分、向量化、FAISS 检索和基于上下文的 DeepSeek 回答生成。',
+      '面向企业制度、学院通知和流程文档场景，构建支持文档解析、智能问答、来源溯源和流程摘要的 RAG + Agent 文档问答系统。',
     highlights: [
-      '使用 LlamaIndex 读取本地 data 目录文档，并通过 SentenceSplitter 切分为可检索文本块。',
-      '使用 Sentence Transformers 生成 embeddings，并基于 FAISS 构建本地向量索引。',
-      '通过 FastAPI 暴露 /ask 接口，返回 question、context、distances、indices 和 answer。',
-      '使用 LangChain LCEL 串联 Prompt、DeepSeek 模型和输出解析器，完成基于检索上下文的回答生成。',
+      '基于 LangGraph 设计 RouterAgent、QueryRewriteAgent、QAAgent、SummaryAgent 和 SourceTracer 工作流。',
+      '负责 RAG 核心链路，包括文档解析、分块、Embedding、ChromaDB 检索和答案来源溯源。',
+      '通过 AGENTS.md、PROGRESS.md 和 .harness/rules.yaml 管理 AI 辅助开发上下文与架构约束。',
+      '完成 80+ 个自动化测试用例，主分支通过 pytest、ruff 和架构检查。',
     ],
-    stack: ['FastAPI', 'LlamaIndex', 'FAISS', 'Sentence Transformers', 'LCEL', 'DeepSeek'],
+    stack: ['FastAPI', 'LangGraph', 'LangChain', 'DeepSeek API', 'ChromaDB', 'pytest'],
   },
 ];
 
@@ -64,7 +64,7 @@ export default function Projects() {
         <SectionHeading
           eyebrow="Selected Work"
           title="用项目证明 AI 能力可以被产品化"
-          description="重点展示我如何把 LLM、Agent 工作流、前后端工程和业务场景连接起来，做出可运行、可维护、可解释的 AI 应用。"
+          description="重点展示我如何把 LLM、Agent 工作流、前后端工程和业务场景连接起来，做出可运行、可维护、可验证的 AI 应用。"
         />
 
         <div className="grid gap-4 lg:grid-cols-3">
@@ -73,14 +73,14 @@ export default function Projects() {
 
             return (
               <article
-                className="flex min-h-[520px] flex-col rounded-lg bg-white p-5 shadow-sm ring-1 ring-gray-200 transition-transform hover:-translate-y-1 hover:shadow-xl"
+                className="flex min-h-[560px] flex-col rounded-lg bg-white p-5 shadow-sm ring-1 ring-gray-200 transition-transform hover:-translate-y-1 hover:shadow-xl"
                 key={project.title}
               >
                 <div className="mb-6 flex items-start justify-between gap-4">
                   <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-lg bg-[#1a1a1c] text-white">
                     <Icon className="h-5 w-5" />
                   </div>
-                  <div className="text-right text-[12px] leading-5 text-gray-500">
+                  <div className="max-w-[180px] text-right text-[12px] leading-5 text-gray-500">
                     <p>{project.role}</p>
                   </div>
                 </div>

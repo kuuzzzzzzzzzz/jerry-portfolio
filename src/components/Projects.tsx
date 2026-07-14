@@ -17,11 +17,11 @@ const projects = [
       '面向企业制度、学院通知和流程文档场景，构建支持文档解析、智能问答、来源溯源和流程摘要的 RAG + Agent 文档问答系统。',
     highlights: [
       '基于 LangGraph 设计 RouterAgent、QueryRewriteAgent、QAAgent、SummaryAgent 和 SourceTracer 工作流。',
-      '负责 RAG 核心链路，包括文档解析、分块、Embedding、ChromaDB 检索和答案来源溯源。',
+      '负责 RAG 核心链路，包括文档解析、分块、Embedding、多路召回、rerank、ChromaDB 检索和答案来源溯源。',
       '通过 AGENTS.md、PROGRESS.md 和 .harness/rules.yaml 管理 AI 辅助开发上下文与架构约束。',
       '完成 80+ 个自动化测试用例，主分支通过 pytest、ruff 和架构检查。',
     ],
-    stack: ['FastAPI', 'LangGraph', 'LangChain', 'DeepSeek API', 'ChromaDB', 'pytest'],
+    stack: ['FastAPI', 'LangGraph', 'LangChain', 'RAG Rerank', 'ChromaDB', 'pytest'],
   },
   {
     icon: DatabaseZap,
